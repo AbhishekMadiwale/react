@@ -16,7 +16,7 @@
 - Tree Shaking = remove unused code 
 
 # Food App Wireframe 
-/**
+<!-- 
     * Header 
         - Logo 
         - Nav Bar
@@ -31,7 +31,7 @@
         - Links
         - Address
         - Contact
-**/
+
 
 Two types of Export/Import 
     - Default Export/ Import 
@@ -40,4 +40,30 @@ Two types of Export/Import
 
     - Named export/Import 
         - export const Components;
-        - import {Components} from "./Path"
+        - import {Components} from "./Path" -->
+
+<!-- Sequence Life Cycle of React with single child 
+    - Parent Constructor
+    - Parent Render 
+    - Child Constructor
+    - Child Render
+    - Child Did Mount
+    - Parent Did Mount
+-->
+
+
+<!-- Sequence React life cycle with multiple children (2 children) 
+    - Parent constructor
+    - Parent Render
+    - Child1 constructor 
+    - Child1 Render
+    - Child 2 constructor
+    - Child 2 Render
+    
+    <DOM updated>
+
+    - Child 1 Did mount
+    - Child 2 did mount
+    - Parent did mount
+-->
+    
