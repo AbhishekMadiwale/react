@@ -21,7 +21,7 @@ const Header = () => {
       <div className="nav-items">
         <ul>
           <li className="status_li">
-            Online Status : 
+            Online Status :
             {onlineStatus ? (
               <img className="status_logo" src={GREEN_DOT} />
             ) : (
@@ -36,6 +36,9 @@ const Header = () => {
           </li>
           <li>
             <Link to="/contact">Contact Us</Link>
+          </li>
+          <li>
+            <Link to="/grocery">Grocery</Link>
           </li>
           <li>
             <Link to="/cart">Cart</Link>
