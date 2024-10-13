@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-const useOnlineStatue = () => {
+const useOnlineStatus = () => {
 
     const [onlineStatus, setOnlineStatus] = useState(true)
     // check if online or offline user is
@@ -18,4 +18,4 @@ const useOnlineStatue = () => {
     return onlineStatus;
 }
 
-export default useOnlineStatue;
+export default useOnlineStatus;

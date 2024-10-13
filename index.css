@@ -8,6 +8,15 @@
     width: 200px;
 }
 
+.status_li {
+    display: flex;
+    align-items: center;
+}
+.status_logo {
+    height: 25px;
+    width: 25px;
+}
+
 .nav-items > ul {
     display: flex;
     list-style-type: none;
