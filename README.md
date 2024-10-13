@@ -42,6 +42,12 @@ Two types of Export/Import
         - export const Components;
         - import {Components} from "./Path" -->
 
+<!-- Life cycle methods on React
+    - Mount 
+    - Update
+    - Unmount
+ -->
+
 <!-- Sequence Life Cycle of React with single child 
     - Parent Constructor
     - Parent Render 
