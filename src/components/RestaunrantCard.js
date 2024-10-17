@@ -1,30 +1,24 @@
-import {CDN_URL} from "../utils/constants";
+import { CDN_URL } from "../utils/constants";
 
 const RestaunrantCard = (props) => {
-    const { resData } = props;
-  
-    const {
-      cloudinaryImageId,
-      name,
-      cuisines,
-      avgRating,
-      sla,
-      costForTwo,
-    } = resData?.info;
-    return (
-      <div className="res-card">
-        <img
-          className="res-logo"
-          alt="res-logo"
-          src={CDN_URL + cloudinaryImageId}
-        />
-        <h3>{name}</h3>
-        <h4>{cuisines.join(",")}</h4>
-        <h4>{avgRating} Stars</h4>
-        <h4>{sla?.slaString}</h4>
-        <h4>{costForTwo}</h4>
-      </div>
-    );
-  };
+  const { resData } = props;
 
-  export default RestaunrantCard;
+  const { cloudinaryImageId, name, cuisines, avgRating, sla, costForTwo } =
+    resData?.info;
+  return (
+    <div className="res-card m-4 p-4 w-[250px] bg-gray-100 rounded-xl text-wrap hover:bg-gray-200">
+      <img
+        className="res-logo rounded-xl"
+        alt="res-logo"
+        src={CDN_URL + cloudinaryImageId}
+      />
+      <h3 className="font-bold py-3 text-lg">{name}</h3>
+      <h4>{cuisines.join(",")}</h4>
+      <h4>{avgRating} Stars</h4>
+      <h4>{sla?.slaString}</h4>
+      <h4>{costForTwo}</h4>
+    </div>
+  );
+};
+
+export default RestaunrantCard;
