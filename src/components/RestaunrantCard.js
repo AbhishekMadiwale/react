@@ -21,4 +21,18 @@ const RestaunrantCard = (props) => {
   );
 };
 
+// Higher order component 
+// input - RestaurantCard ==> RestaurantCardDiscount 
+
+export const priceDiscount = (RestaunrantCard) => {
+  return (props) => {
+    return (
+      <div>
+        <labe className="absolute bg-black text-white m-2 p-2 rounded-lg">Discount</labe>
+        <RestaunrantCard {...props}/>
+      </div>
+    )
+  }
+}
+
 export default RestaunrantCard;

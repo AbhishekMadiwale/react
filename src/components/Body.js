@@ -1,4 +1,4 @@
-import RestaunrantCard from "./RestaunrantCard";
+import RestaunrantCard, { priceDiscount } from "./RestaunrantCard";
 import resList from "../utils/mockData";
 import { useState, useEffect } from "react";
 import Shimmer from "./Shimmer";
@@ -12,6 +12,8 @@ const Body = () => {
 
   const [searchText, setSearchText] = useState("");
 
+  const RestaurantCardPriceDiscount = priceDiscount(RestaunrantCard);
+
   useEffect(() => {
     fetchData();
   }, []);
@@ -22,7 +24,8 @@ const Body = () => {
     );
 
     const json = await data.json();
-    console.log(json);
+    // console.log(json);
+    console.log(listOfRestaurants);
     // console.log(
     //   json.data.cards[4].card.card.gridElements.infoWithStyle.restaurants
     // );
@@ -95,11 +98,11 @@ const Body = () => {
             key={restaurant.info.id}
             to={"/restaurant/" + restaurant.info.id}
           >
-            <RestaunrantCard
-              key={restaurant.info.id}
-              // key={restaurant.data.cards[4].card.card.gridElements.infoWithStyle.restaurants[1].info.id}
-              resData={restaurant}
-            />
+            {restaurant.info.aggregatedDiscountInfoV3.subHeader ? (
+              <RestaurantCardPriceDiscount resData={restaurant} />
+            ) : (
+              <RestaunrantCard key={restaurant.info.id} resData={restaurant} />
+            )}
           </Link>
         ))}
       </div>
