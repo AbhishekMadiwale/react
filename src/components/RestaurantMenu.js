@@ -12,6 +12,8 @@ const RestaunrantMenu = () => {
 
   const resInfo = useRestaurantMenu(resId);
 
+  const [showIndex, setShowIndex] = useState(0)
+
   // commenting useEffect and fetchMenu cause
   // same functionality will write in custom hook
 
@@ -59,8 +61,16 @@ const RestaunrantMenu = () => {
       <p className="font-bold text-lg">
         {cuisines.join(", ")} - {costForTwoMessage}
       </p>
-      {categories.map((category) => (
-        <RestaunrantCategory data={category?.card?.card} />
+      {categories.map((category, index) => (
+        <RestaunrantCategory 
+          data={category?.card?.card}
+
+          // component is controlled one
+          // Parent controlling which accordion should open and close
+          // This is a controlled component now
+          showItems = {index === showIndex ? true : false}  
+          setShowIndex ={() => {setShowIndex(index)}}
+        />
       ))}
       {/* <h3>{cuisines.join(", ")}</h3>
       <h3>{costForTwoMessage}</h3>
