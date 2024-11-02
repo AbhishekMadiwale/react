@@ -1,7 +1,14 @@
 import { CDN_URL } from "../utils/constants";
+import { useDispatch } from "react-redux";
+import { addItem } from "../utils/cartSlice";
 
 const ItemList = ({ items }) => {
-  console.log(items);
+
+  const dispatch = useDispatch()
+  const handleItemAdd = (item) => {
+    // dispatch action here
+    dispatch(addItem(item))
+  }
   return (
     <div>
       {items.map((items) => (
@@ -24,7 +31,9 @@ const ItemList = ({ items }) => {
 
             <div>
               <div className="absolute w-auto">
-                <button className="bg-black text-white shadow-lg p-2 rounded-lg">
+                <button className="bg-black text-white shadow-lg p-2 rounded-lg"
+                  onClick={() => handleItemAdd(items)}
+                >
                   {" "}
                   Add +
                 </button>

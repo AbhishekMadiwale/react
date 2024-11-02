@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
 import { RED_DOT, GREEN_DOT } from "../utils/constants";
+import { useSelector } from "react-redux";
 const Header = () => {
   // let btnName = "Login";
 
@@ -12,6 +13,10 @@ const Header = () => {
   useEffect(() => {
     // console.log("Header Rendering");
   }, [btnNameReact]);
+
+  // Subscribing the store with Selector Hook
+  const cartItems = useSelector((store) => store.cart.items)
+  console.log(cartItems)
 
   return (
     <div className="flex justify-between shadow-lg sm:bg-yellow-500 md:bg-green-500 lg:bg-pink-100">
@@ -42,7 +47,7 @@ const Header = () => {
             <Link to="/grocery">Grocery</Link>
           </li>
           <li className="px-4">
-            <Link to="/cart">Cart</Link>
+            <Link to="/cart">Cart = {cartItems.length} items</Link>
           </li>
           <button
             className="px-4 "

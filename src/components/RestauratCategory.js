@@ -2,7 +2,7 @@ import { useState } from "react";
 import ItemList from "./ItemList";
 
 const RestaunrantCategory = ({ data, showItems, setShowIndex }) => {
-  console.log(data);
+  // console.log(data);
 
 // commentig below useState, making component as a controlled
 // const [showItems, setShowItems] = useState(false)
