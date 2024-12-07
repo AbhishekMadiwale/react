@@ -9,6 +9,7 @@ const Body = () => {
   // Syntax = const[variableName, functionName] = useState([default value]);
   const [listOfRestaurants, setListOfRestaurant] = useState([]);
   const [filteredRestaurant, setFilteredRestaurant] = useState([]);
+  const [inputText, setInputTest] = useState("");
 
   const [searchText, setSearchText] = useState("");
 
@@ -49,6 +50,10 @@ const Body = () => {
     <h1>Loading...</h1>;
     return <Shimmer />;
   }
+  console.log({ listOfRestaurants });
+  const clearInputField = () => {
+    setInputTest(inputText);
+  }
 
   return (
     <div className="body">
@@ -66,15 +71,23 @@ const Body = () => {
             className="px-4 py-2 bg-green-300 m-4 rounded-lg"
             onClick={() => {
               let filteredData = listOfRestaurants.filter((res) =>
-                res.card.card.info.name
-                  .toLowerCase()
-                  .includes(searchText.toLowerCase())
+                // res.card.card.info.name
+                res.info.name.toLowerCase().includes(searchText.toLowerCase())
               );
               console.log(searchText);
               setListOfRestaurant(filteredData);
             }}
           >
             Search
+          </button>
+
+          <button
+            className="px-4 py-2 bg-green-300 m-4 rounded-lg"
+            onClick={() => {
+              fetchData()
+            }}
+          >
+            Clear
           </button>
         </div>
         <div className="search m-4 p-4 flex items-center">

@@ -89,3 +89,19 @@ Sequence React life cycle with multiple children (2 children)
         - Testing whole flow of the app
     
     - As a developer we concern majourly first 2 testing, i.e. Unit and Integration testing
+
+# Libraries for testing
+    - React Testing Library (RTL)
+        - Most standard way to write test cases.
+        - Many companies use this library
+        - It is based on DOM Testing Library. RTL is wrapper on DOM Testing Library
+    
+    - JEST
+        - RTL uses JEST behind the scenes.
+
+# Setting up Testing in App
+    - Installed RTL
+    - Installed Jest 
+    - Intalled Babel dependencies
+    - Configure Babel
+    - Config .parcelrc file to disable babel from Parcel
