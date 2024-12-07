@@ -105,3 +105,5 @@ Sequence React life cycle with multiple children (2 children)
     - Intalled Babel dependencies
     - Configure Babel
     - Config .parcelrc file to disable babel from Parcel
+    - JEST Configuration (by using command = npx jest --init)
+    - Install JSDOM library (You will find the documentation on RTL website)
