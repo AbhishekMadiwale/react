@@ -79,3 +79,13 @@ Sequence React life cycle with multiple children (2 children)
     - We will dispatch an action.
     - Selector to read the new data
     
+# Types of testing (developer testing)
+    - Unit testing
+        - Unit testing means testing a unit or a single component in an isolation.
+        - Not testing the whole app, only testing a single component.
+    - Integration testing 
+        - Integration testing means testing multiple components which works involving each other.
+    - End to end testing or e2e testing
+        - Testing whole flow of the app
+    
+    - As a developer we concern majourly first 2 testing, i.e. Unit and Integration testing
