@@ -3,8 +3,9 @@ import { CDN_URL } from "../utils/constants";
 const RestaunrantCard = (props) => {
   const { resData } = props;
 
-  const { cloudinaryImageId, name, cuisines, avgRating, sla, costForTwo } =
-    resData?.info;
+  const { cloudinaryImageId, name, cuisines, avgRating, sla, costForTwo } = resData?.info;
+
+  console.log(resData );
   return (
     <div className="res-card m-4 p-4 w-[250px] bg-gray-100 rounded-xl text-wrap hover:bg-gray-200">
       <img
@@ -21,18 +22,20 @@ const RestaunrantCard = (props) => {
   );
 };
 
-// Higher order component 
-// input - RestaurantCard ==> RestaurantCardDiscount 
+// Higher order component
+// input - RestaurantCard ==> RestaurantCardDiscount
 
 export const priceDiscount = (RestaunrantCard) => {
   return (props) => {
     return (
       <div>
-        <labe className="absolute bg-black text-white m-2 p-2 rounded-lg">Discount</labe>
-        <RestaunrantCard {...props}/>
+        <labe className="absolute bg-black text-white m-2 p-2 rounded-lg">
+          Discount
+        </labe>
+        <RestaunrantCard {...props} />
       </div>
-    )
-  }
-}
+    );
+  };
+};
 
 export default RestaunrantCard;
