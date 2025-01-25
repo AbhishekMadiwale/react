@@ -42,3 +42,6 @@ test("Should load a button inside Contact component", ()=>{
  *  - Querying
  *  - Assertion
  */
+
+// we can use it instead of test for test case
+// it("it should load a component",() =>{})
