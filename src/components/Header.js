@@ -28,7 +28,7 @@ const Header = () => {
           <li className="px-4 flex justify-evenly">
             Online Status :
             {onlineStatus ? (
-              <img className="status_logo h-5 " src={GREEN_DOT} />
+              <img className="status_logo h-5 rounded-2xl" src={GREEN_DOT} />
             )
              : (
               <img className="status_logo h-5" src={RED_DOT} />

@@ -107,3 +107,6 @@ Sequence React life cycle with multiple children (2 children)
     - Config .parcelrc file to disable babel from Parcel
     - JEST Configuration (by using command = npx jest --init)
     - Install JSDOM library (You will find the documentation on RTL website)
+    - Install @babel/preset-react - to make JSX work in test cases.
+    - Install @babel/preset-react inside my babel config file
+    - Install @testing-library/jest-dom
